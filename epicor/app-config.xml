@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <taskAgentConfiguration>
+    <agent>
+      <!--You can specify the action at the agent level.  This will override the value passed in at the command line.-->
+      <action></action>
+      <name>EpicorERPTest</name>
+      <!--Indicates if the agent should be started or not.-->
+      <enabled>True</enabled>
+      <appserverUrl>net.tcp://VTEPICDEV35.us.haywardtyler.msft/EpicorERPTest</appserverUrl>
+      <!--The endpoint binding for the appserver. Valid values are:-->
+      <!--UsernameWindowsChannel, Windows, UsernameSslChannel, HttpBinaryUsernameSslChannel, HttpsBinaryWindowsChannel, HttpsBinaryUsernameChannel, HttpsOffloadBinaryUserNameChannel-->
+      <binding>UsernameSslChannel</binding>
+      <!--The Epicor user ID and password.  Not needed if using the Windows or HttpsBinaryWindowsChannel bindings.-->
+      <userId>manager</userId>
+      <userPassword>********************</userPassword> <!--DO NOT SAVE PW TO GITHUB-->
+      <!--The amount of time to wait before a call to the server will timeout in seconds.-->
+      <operationTimeout>86400</operationTimeout>
+      <!--The maximum number of times a call will try to connect to the appserver before failing.-->
+      <maxConnectionAttempts>10</maxConnectionAttempts>
+      <!--The maximum number of simultaneous tasks that can be run.-->
+      <maxConcurrentTasks>20</maxConcurrentTasks>
+      <!--If using an SSL endpoint binding, should the SSL certificate be validated.-->
+      <validateWcfCert>false</validateWcfCert>
+      <dnsEndpointIdentity />
+      <!--Indicates the amount of time to wait before restarting when an agent fails due to an error.-->
+      <!--Minimum value is 45; maximum value is 300.-->
+      <restartDelay>45</restartDelay>
+    </agent>
+  </taskAgentConfiguration>
+</configuration>
